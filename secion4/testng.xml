@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test name="loginTest">
+       <parameter name="email" value="mahmed.mrmr15352255555@gmail.com"/>
+        <parameter name="password" value="mahmd123456789"/>
+        <classes>
+            <class name="TestCases.ParameterizedTest"/>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="C:/Users/DELL/IdeaProjects/secion4">
+        <classes>
+            <class name="TestCases.RegisterPageTestCases">
+                <methods>
+                    <include name="verifyValidRegisterWithUnUsedEmail"/>
+                    <include name="verifyValidRegisterWithUsedEmail"/>
+                </methods>
+            </class>
+            <class name="TestCases.LoginPageTestCases">
+                <methods>
+                    <include name="verifyValidLogInWithValidEmailAndValidPassword"/>
+                    <include name="verifyInValidLogInWithValidEmailAndInvalidPassword"/>
+                </methods>
+            </class>
+            <class name="TestCases.WelcomeMessage">
+                <methods>
+                    <include name="sampleTest1"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
